@@ -1,1 +1,16 @@
 # examples-of-cybersecurity-flaws
+
+1. Broken access control. Allows posting when not logged in (views.py)
+The fix forces you to log in, when opening the posting site, while 
+the unfixed simply hides the link to the posting site, which can be
+avoided by going to the URL directly. 
+
+2. Insecure design. This site has no standards for passwords. It can
+be just a single letter. (settings.py)
+
+3. Vulnerable and Outdated Components. Password hashing is done with
+old and outdated MD5 (settings.py)
+
+4. CSRF checks have been disabled (settings.py)
+
+5. Injection. Site is vulnerable against XSS (access.html and views.py)
